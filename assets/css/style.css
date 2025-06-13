@@ -1,0 +1,200 @@
+/*===============================
+=            Layout             =
+===============================*/
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/*===============================
+=            Card               =
+===============================*/
+
+.card {
+    background-color: #fff;
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.6s ease-out;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.card-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 1.25rem;
+}
+
+/*===============================
+=        Form Elements          =
+===============================*/
+
+.form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    display: block;
+    font-weight: 600;
+    color: #34495e;
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    width: 100%;
+    height: 48px;
+    padding: 0.5rem 1rem;
+    border: 2px solid #ecf0f1;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1rem;
+}
+
+.form-control:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+    outline: none;
+}
+
+/* Floating Label Support (Optional) */
+.form-group label {
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    background: white;
+    padding: 0 6px;
+    font-size: 0.8rem;
+    color: #3498db;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+
+.form-control:focus + label,
+.form-control:not(:placeholder-shown) + label {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*===============================
+=         Buttons               =
+===============================*/
+
+.btn-primary {
+    display: inline-block;
+    background-color: #3498db;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/*===============================
+=         Alerts                =
+===============================*/
+
+.alert {
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+}
+
+/*===============================
+=           Links               =
+===============================*/
+
+a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+/*===============================
+=      Responsive Design        =
+===============================*/
+
+@media (max-width: 768px) {
+    .card-body {
+        padding: 1.5rem;
+    }
+
+    .form-control {
+        height: 44px;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-title {
+        font-size: 1.5rem;
+    }
+
+    .btn-primary {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .form-group {
+        margin-bottom: 1.25rem;
+    }
+}
+
+/*===============================
+=       Animation Effects       =
+===============================*/
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
