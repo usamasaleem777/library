@@ -1223,7 +1223,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (heartIcon.classList.contains('far')) {
                 heartIcon.classList.remove('far');
                 heartIcon.classList.add('fas');
-                
+             dzdx   
                 // Increment count
                 let currentCount = parseInt(countElement.textContent) || 0;
                 countElement.textContent = currentCount + 1;
